@@ -13,6 +13,7 @@ Features
 * Paste administration. Each paste has a unique UUID that can be used to
 	modify or delete it.
 * Invite code support.
+* Temporary paste support
 * Middleware support
 	* Syntax highlighting
 	* Online form
