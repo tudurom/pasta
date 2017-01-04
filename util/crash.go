@@ -1,9 +1,9 @@
 package util
 
-import "log"
+import "github.com/Sirupsen/logrus"
 
 func Crash(message string, err error) {
 	if err != nil {
-		log.Fatal(message, "\n\n", err)
+		logrus.Fatal(message, "\n\n", err)
 	}
 }
