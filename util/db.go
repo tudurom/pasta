@@ -4,7 +4,7 @@ import (
 	"github.com/Sirupsen/logrus"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
-	"github.com/tudurom/pasta/model"
+	"github.com/tudurom/pasta/models"
 )
 
 var GlobalDB *gorm.DB
@@ -18,5 +18,5 @@ func ConnectToDB() {
 
 func MigrateSchema() {
 	logrus.Print("Migrating schemas")
-	GlobalDB.AutoMigrate(&model.Paste{})
+	GlobalDB.AutoMigrate(&models.Paste{})
 }

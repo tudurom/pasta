@@ -6,6 +6,7 @@ import (
 	log "github.com/Sirupsen/logrus"
 
 	"github.com/gin-gonic/gin"
+	"github.com/tudurom/pasta/controllers"
 	"github.com/tudurom/pasta/util"
 )
 
@@ -24,6 +25,6 @@ func main() {
 	util.MigrateSchema()
 	defer util.GlobalDB.Close()
 
-	util.MakeRoutes(engine)
+	controllers.MakeRoutes(engine)
 	engine.Run(":8080")
 }
